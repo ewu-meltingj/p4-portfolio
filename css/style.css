@@ -1,0 +1,195 @@
+/* base type */
+body {
+  background: #efefef;
+  font-family: 'Open Sans', sans-serif;
+  transition: font-size 0.5s ease;
+  font-size: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', sans-serif;
+  line-height: 1.618em;
+  margin-top: 0.20225em;
+  margin-bottom: 0.4045em; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-size: .33em;
+    font-family: 'Open Sans', sans-serif; }
+
+h1 {
+  font-size: 3.3333em; }
+
+h2 {
+  font-size: 2.6667em; }
+
+h3 {
+  font-size: 2em; }
+
+h4 {
+  font-size: 1.3333em; }
+
+h5 {
+  font-size: 1.1667em; }
+
+h6 {
+  font-size: 1em; }
+
+p {
+  line-height: 1.618em;
+  margin-bottom: 0.4045em;
+  font-size: 1em; }
+
+a:link, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+ /*end base type */
+
+
+/*slide dim style*/
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+
+div.main-wrapper {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+}
+
+div.main-wrapper section {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+}
+
+div.logo {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 1337;
+}
+
+div.img-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+div.img-wrapper img {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	bottom: -9999px;
+	right: -9999px;
+	margin: auto;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+div.content-wrapper {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+div.main-content, div.footer {
+	margin: 0 auto;
+	width: 960px;
+}
+
+div.main-content {
+	padding: 20px;
+	background: rgba(255,255,255, 0.85);
+}
+
+div.footer {
+	padding-top: 5px;
+}
+
+/* Slideshow Arrows */
+
+div.main-wrapper section:first-of-type:after {
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
+/*slideshow functionality*/
+section {
+	transition: opacity .5s, visibility .5s;
+}
+input[type=checkbox] {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	z-index: 1337;
+}
+input[type=checkbox]:checked ~ section .main-content {
+	visibility: hidden;
+}
+input[type=radio]:after {
+	position: absolute;
+	top: calc(50% - 35px);
+	width: 70px;
+	height: 70px;
+	background: #efefef;
+	padding: 15px;
+	border-radius: 10px;
+	z-index: 1336;
+	content: url('../svg/right.svg');
+	right: 20px;
+}
+input[type=radio]:checked, input[type=radio]:checked ~ input[type=radio], input[type=radio]:checked ~ section {
+	visibility: hidden;
+	opacity:0;
+}
+input[type=radio]:nth-of-type(2):checked ~ input[type=radio]:last-of-type, input[type=radio]:nth-of-type(2):checked ~ section:last-of-type {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* css tricks circle */
+#circle {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	background: rgba(255,255,255, 0.45);
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+#circle:before {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	content: url('../svg/happy40.svg');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
