@@ -125,10 +125,10 @@ div.footer {
 
 /*slideshow functionality*/
 section{
-	transition: opacity .25s, visibility .25s, height .25s, padding .25s;
+	transition: opacity .25s, visibility .25s, padding .25s;
 }
 .main-content, .footer {
-	transition: opacity 2s, visibility 2s, height 2s, padding 1s;
+	transition: opacity 2s, visibility 2s, padding 1s;
 }
 input[type=radio] {
 	position: absolute;
@@ -191,7 +191,7 @@ input[type=checkbox]:checked ~ .main-wrapper section .main-content, input[type=c
 	width: 0;
 	height: 0px;
 	padding: 0px;
-	transition: opacity .25s, visibility .25s, height .25s, padding .25s;
+	transition: opacity .25s, visibility .25s, padding .25s;
 }
 
 
