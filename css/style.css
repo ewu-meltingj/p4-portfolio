@@ -126,10 +126,10 @@ div.footer {
 
 /*slideshow functionality*/
 section{
-	transition: opacity .75s, visibility .75s, height .75s, padding .75s;
+	transition: opacity .25s, visibility .25s, height .25s, padding .25s;
 }
 .main-content, .footer {
-	transition: opacity 3s, visibility 3s, height 3s, padding 1s;
+	transition: opacity 2s, visibility 2s, height 2s, padding 1s;
 }
 input[type=radio] {
 	position: absolute;
