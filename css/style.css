@@ -91,8 +91,9 @@ div.img-wrapper img {
 	bottom: -9999px;
 	right: -9999px;
 	margin: auto;
-	min-width: 100%;
-	min-height: 100%;
+	/*width: 960px;*/
+	/*min-width: 100%;*/
+	/*min-height: 100%;*/
 }
 
 div.content-wrapper {
@@ -151,7 +152,7 @@ label:not(#logo) {
 	cursor: pointer;
 }
 label:not(#logo):before {
-	content: url('../svg/right.svg');
+	content: url('../svg/right2.svg');
 }
 input[type=radio]:checked, input[type=radio]:checked ~ label:not(#logo), input[type=radio]:checked ~ section {
 	visibility: hidden;
@@ -177,8 +178,8 @@ label#logo {
 	-ms-user-select: none;
 	cursor: pointer;
 }
-label#logo:before {content: url('../svg/happy40.svg');}
-input[type=checkbox]:checked + label#logo:before {content: url('../svg/black267.svg');}
+label#logo:before {content: url('../svg/happy.svg');}
+input[type=checkbox]:checked + label#logo:before {content: url('../svg/upset.svg');}
 input[type=checkbox] {
 	position: absolute;
 	top: -9999px;
@@ -194,8 +195,93 @@ input[type=checkbox]:checked ~ .main-wrapper section .main-content, input[type=c
 	transition: opacity .25s, visibility .25s, padding .25s;
 }
 
+@media screen and (orientation:portrait) {
+	img {
+		min-height: 100%;
+	}
+}
+@media screen and (orientation:landscape){
+	/* Landscape styles */
+	@media (min-width:0px){
+		img {
+			min-height: 100%;
+		}
+	}
+	@media (min-width:1280px){
+		img {
+			min-width: 100%;
+		}
+	}
+}
 
 
+/*320*/
+/* default styles here for older browsers. 
+I tend to go for a 600px - 960px width max but using percentages
+*/
+/*answer from http://stackoverflow.com/users/1844811/beneto*/
+@media only screen and (max-width:1190px){
+	div.main-content, div.footer {
+		width: 735px;
+		font-size: 80%;
+	}
+}
+/*important*/
+@media only screen and (max-width:970px){ 
+	div.main-content, div.footer {
+		width: 600px;
+	}
+	label:not(#logo) {
+		width: 19px;
+		height: 30px;
+		right: 5px;
+	}
+	label#logo {
+		top: 10px;
+		left: 10px;
+		height: 62px;
+		width: 62px;
+		-moz-border-radius: 31px;
+		-webkit-border-radius: 31px;
+		border-radius: 31px;
+	}
+
+}
+@media only screen and (max-width:786px){
+	div.main-content, div.footer {
+		width: 486px;
+	}
+}
+@media only screen and (max-width:672px){
+	div.main-content, div.footer {
+		width: 415px;
+	}
+}
+@media only screen and (max-width:596px){
+	div.main-content, div.footer {
+		width: 368px;
+	}
+}
+@media only screen and (max-width:546px){
+	div.main-content, div.footer {
+		width: 337px;
+	}
+}
+@media only screen and (max-width:510px){
+	div.main-content, div.footer {
+		width: 315px;
+	}
+}
+@media only screen and (max-width:486px){
+	div.main-content, div.footer {
+		width: 300px;
+	}
+}
+@media only screen and (max-width:470px){
+	div.main-content, div.footer {
+		width: 290px;
+	}
+}
 
 
 
