@@ -123,16 +123,6 @@ div.footer {
 	overflow: hidden;
 }
 
-/* Slideshow Arrows */
-
-div.main-wrapper section:nth-of-type(2):after {
-	-webkit-transform: scaleX(-1);
-	-moz-transform: scaleX(-1);
-	-ms-transform: scaleX(-1);
-	-o-transform: scaleX(-1);
-	transform: scaleX(-1);
-}
-
 /*slideshow functionality*/
 section, .main-content, .footer {
 	transition: opacity .5s, visibility .5s, height .5s, width .5s, padding .5s;
@@ -164,7 +154,7 @@ input[type=radio]:checked, input[type=radio]:checked ~ label:not(#logo), input[t
 	visibility: hidden;
 	opacity:0;
 }
-input[type=radio]:nth-of-type(2):checked ~ label:not(#logo), input[type=radio]:nth-of-type(2):checked ~ section:last-of-type {
+input[type=radio]:nth-of-type(1):checked ~ label:not(#logo), input[type=radio]:nth-of-type(1):checked ~ section:last-of-type {
 	visibility: visible;
 	opacity: 1;
 }
