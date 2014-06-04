@@ -194,8 +194,6 @@ input[type=checkbox]:checked ~ .main-wrapper section .main-content, input[type=c
 	padding: 0px;
 	transition: opacity .25s, visibility .25s, height .25s, padding .25s;
 }
-	
-
 
 
 
