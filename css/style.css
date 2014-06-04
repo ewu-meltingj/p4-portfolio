@@ -132,9 +132,12 @@ section{
 	transition: opacity 2s, visibility 2s, height 2s, padding 1s;
 }
 input[type=radio] {
-	position: absolute;
-	top: -9999px;
-	left: -9999px;
+	position: relative;
+	top: 60px;
+	right: calc(100% - 210px);
+	z-index: 2000;
+	float: right;
+	margin-right: 5px;
 }
 label:not(#logo) {
 	position: fixed;
@@ -154,9 +157,12 @@ label:not(#logo) {
 label:not(#logo):before {
 	content: url('../svg/right.svg');
 }
-input[type=radio]:checked, input[type=radio]:checked ~ label:not(#logo), input[type=radio]:checked ~ section {
+input[type=radio]:checked ~ label:not(#logo), input[type=radio]:checked ~ section {
 	visibility: hidden;
 	opacity:0;
+}
+input[type=radio]:checked {
+	z-index: 20;
 }
 input[type=radio]:nth-of-type(1):checked ~ label:not(#logo), input[type=radio]:nth-of-type(1):checked ~ section:last-of-type {
 	visibility: visible;
