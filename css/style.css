@@ -76,7 +76,7 @@ div.logo {
 }
 
 div.img-wrapper {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
@@ -113,7 +113,11 @@ div.main-content {
 }
 
 div.footer {
+	position: relative;
 	padding-top: 5px;
+	background: rgba(255,255,255, 0.85);
+	padding: 5px 20px 10px 20px;
+	z-index: 1335;
 }
 
 /* Slideshow Arrows */
@@ -127,23 +131,14 @@ div.main-wrapper section:first-of-type:after {
 }
 
 /*slideshow functionality*/
-section {
+section, .main-content {
 	transition: opacity .5s, visibility .5s;
 }
-input[type=checkbox] {
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	z-index: 1337;
-}
-input[type=checkbox]:checked ~ section .main-content {
-	visibility: hidden;
-}
 input[type=radio]:after {
-	position: absolute;
-	top: calc(50% - 35px);
-	width: 70px;
-	height: 70px;
+	position: fixed;
+	top: calc(50% - 24px);
+	width: 30px;
+	height: 48px;
 	background: #efefef;
 	padding: 15px;
 	border-radius: 10px;
@@ -159,26 +154,37 @@ input[type=radio]:nth-of-type(2):checked ~ input[type=radio]:last-of-type, input
 	visibility: visible;
 	opacity: 1;
 }
-
-/* css tricks circle */
-#circle {
-	position: relative;
-	width: 100px;
+label#logo {
+	position: fixed;
+	top: 20px;
+	left: 20px;
 	height: 100px;
-	background: rgba(255,255,255, 0.45);
+	width: 100px;
+	background: rgba(55,245,155, 0.3);
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
+	z-index: 1337;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
-#circle:before {
-	position: absolute;
-	height: 100px;
-	width: 100px;
+label#logo:before {
 	content: url('../svg/happy40.svg');
 }
-
-
-
+input[type=checkbox] {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	z-index: 1337;
+}
+input[type=checkbox]:checked + label#logo:before {
+	content: url('../svg/black267.svg');
+}
+input[type=checkbox]:checked ~ section .main-content {
+	visibility: hidden;
+	opacity: 0;
+}
 
 
 
