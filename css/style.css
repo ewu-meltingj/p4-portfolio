@@ -230,6 +230,7 @@ I tend to go for a 600px - 960px width max but using percentages
 	div.main-content, div.footer {
 		width: 735px;
 		font-size: 80%;
+		transition: width .125s;
 	}
 }
 /*important*/
