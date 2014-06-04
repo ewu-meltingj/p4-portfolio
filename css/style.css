@@ -1,18 +1,18 @@
 /* base type */
 body {
   background: #efefef;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   transition: font-size 0.5s ease;
   font-size: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Lustria', serif;
   line-height: 1.618em;
   margin-top: 0.20225em;
   margin-bottom: 0.4045em; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: .33em;
-    font-family: 'Open Sans', sans-serif; }
+    font-family: 'Lato', sans-serif; }
 
 h1 {
   font-size: 3.3333em; }
@@ -49,6 +49,7 @@ html, body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
+	padding: 0;
 }
 
 
@@ -124,8 +125,11 @@ div.footer {
 }
 
 /*slideshow functionality*/
-section, .main-content, .footer {
-	transition: opacity .5s, visibility .5s, height .5s, width .5s, padding .5s;
+section{
+	transition: opacity .75s, visibility .75s, height .75s, padding .75s;
+}
+.main-content, .footer {
+	transition: opacity 3s, visibility 3s, height 3s, padding 1s;
 }
 input[type=radio] {
 	position: absolute;
@@ -188,6 +192,7 @@ input[type=checkbox]:checked ~ .main-wrapper section .main-content, input[type=c
 	width: 0;
 	height: 0px;
 	padding: 0px;
+	transition: opacity .25s, visibility .25s, height .25s, padding .25s;
 }
 	
 
