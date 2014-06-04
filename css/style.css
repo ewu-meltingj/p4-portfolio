@@ -51,10 +51,6 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-body::-webkit-scrollbar {
-	display: none;
-}
-
 
 div.main-wrapper {
 	position: relative;
