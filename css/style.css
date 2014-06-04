@@ -134,10 +134,10 @@ section{
 input[type=radio] {
 	position: relative;
 	top: 60px;
-	right: calc(100% - 210px);
+	right: calc(100% - 220px);
 	z-index: 2000;
 	float: right;
-	margin-right: 5px;
+	margin-right: 8px;
 }
 label:not(#logo) {
 	position: fixed;
